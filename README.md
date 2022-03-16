@@ -1,6 +1,10 @@
-# store
-Store practice
---- Creation database in POSTGRESQL -- 
+# store #  
+##Store practice  
+
+NOTA: Para ejecutar el proyecto ejecutar la clase StoreApplication.java  
+
+- Creation database in POSTGRESQL  
+```
 
 create database store;
 
@@ -13,10 +17,10 @@ create table product (
 	stock numeric(10,0) not null, 
 	proveedor varchar(100)
 );
+```
 
-NOTA: Para ejecutar el proyecto ejecutar la clase StoreApplication.java 
-
--- Crear producto --- 
+- Crear producto
+```
 ULR:  localhost:8080/product
 METOD: POST 
 JSON_BODY: 
@@ -29,8 +33,9 @@ JSON_BODY:
     "stock":2,
     "proveedor":"adidas"
 }
-
--- Actualizar producto
+```
+- Actualizar producto  
+```
 ULR:   localhost:8080/product/{idProduct} Ejemplo ->  localhost:8080/product/1
 METOD: PUT 
 JSON_BODY:
@@ -41,13 +46,15 @@ JSON_BODY:
         "stock": 20,
         "proveedor": "adidas"
     }
-	
--- obtener producto
+```
+- obtener producto  
+```
 ULR:    localhost:8080/product/{idProduct} Ejemplo ->  localhost:8080/product/1
 METOD: GET 
+```
 
-
-
--- Obtener productos 
+- Obtener productos  
+```
 ULR:    localhost:8080/product/list
 METOD: GET 
+```
